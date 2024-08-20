@@ -6,7 +6,7 @@
     <title>Add new comment</title>
 </head>
 <body>
-    <h1>please add your comment</h1>
+    <!-- <h1>please add your comment</h1>
     <div id="comment-container">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni libero modi, doloremque delectus necessitatibus non doloribus expedita nostrum minus id voluptates optio officiis reprehenderit quidem sit deleniti aut voluptatem. Fugiat, rem delectus, placeat laboriosam labore quidem illo ipsam exercitationem ex repudiandae expedita unde! Quam, quia! Provident nulla pariatur molestias! Asperiores!</p>
         <p>Laboriosam maxime non voluptate placeat eum corrupti aspernatur nobis iste ex ducimus velit facilis officiis repellendus dolore harum repudiandae, autem accusantium, assumenda sed. Doloribus iure, nihil consequatur neque delectus animi quae sapiente, cumque ex et eos? Velit molestiae vel corrupti aliquid, commodi nam fugit, ab voluptatem dolores quibusdam doloribus ducimus.</p>
@@ -17,7 +17,7 @@
         <br>
         <button id="btn-post">submit</button>
     </div>
-    <script>
+    
         //step 1: add event listener to the post button
         document.getElementById('btn-post').addEventListener('click',function(){
             //step 2: get the comment
@@ -38,7 +38,51 @@
             //step 4: clear the textarea
             commentBox.value = '';
 
+        }) -->
+
+
+       <div>
+
+        <h1>please add your comment</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, facere ipsam est veritatis deleniti non ad quis id ducimus totam similique repudiandae. Sint, ipsa. Beatae corrupti asperiores minima nisi error!</p>
+        <p>Magnam molestias sed eligendi quos, iusto porro reprehenderit, veniam temporibus dolorum dolore quisquam nobis aspernatur unde, laboriosam eius? Aspernatur qui voluptas consequatur reprehenderit cumque mollitia quo, beatae dolorem culpa animi!</p>
+        <p>Laboriosam reiciendis vitae suscipit eum, dolorum nihil explicabo vero numquam consectetur sunt sequi quidem, veniam tenetur pariatur iure temporibus, quibusdam officia qui facilis ducimus assumenda magnam voluptatem cumque. Magni, eveniet!</p>
+
+       <div>
+        <textarea name="" id="new-comment" cols="60" rows="5"></textarea>
+        <br>
+        <button id="btn-post">submit</button>
+       </div>
+       <script>
+        document.getElementById('btn-post').addEventListener('click', function(){
+            const newComment = document.getElementById('new-comment');
+            console.log(newComment)
         })
+       </script>
+       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+
     </script>
 </body>
 </html>
