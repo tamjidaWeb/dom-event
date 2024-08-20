@@ -6,25 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 id="secret-info">my secret info</h1>
+    <h1 id="secret-info">my secret password</h1>
     <input id="delete-confirm" type="text" placeholder="please type delete">
     <button id="btn-delete" disabled>delete</button>
+    
 
     <script>
-        document.getElementById('delete-confirm').addEventListener('keyup', function (event){
+        document.getElementById('delete-confirm').addEventListener('keyup',function(event){
             const text = event.target.value;
-            console.log(text);
+           
             const deleteButton = document.getElementById('btn-delete');
             if(text === 'delete'){
-                deleteButton.removeAttribute('disabled');
+                deleteButton.removeAttribute('disabled')
             }
             else{
                 deleteButton.setAttribute('disabled',true);
             }
         })
-        document.getElementById('btn-delete').addEventListener('click',function(){
-         const secret =   document.getElementById('secret-info');
-         secret.style.display = 'none';
+        document.getElementById('btn-delete').addEventListener('click', function(event){
+           const secret = document.getElementById('secret-info');
+           secret.style.display = 'none';
         })
     </script>
 </body>
