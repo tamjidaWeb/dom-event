@@ -10,19 +10,20 @@
     <section>
         <ul id="list-container">
             <li class="item">Lorem, ipsum dolor.</li>
-            <li class="item">Reiciendis, quibusdam libero.</li>
-            <li class="item">Quod, dicta praesentium.</li>
-            <li class="item">Exercitationem, saepe qui?</li>
-            <li class="item">Ex, dolor nulla!</li>
-            <li class="item">A, ut sapiente!</li>
+            <li class="item">Deleniti, delectus assumenda!</li>
+            <li class="item">Delectus, consequuntur eveniet!</li>
+            <li class="item">Eos, ad quaerat.</li>
+            <li class="item">Quas, doloremque ipsum?</li>
+            <li class="item">Porro, voluptatem. Doloremque!</li>
         </ul>
         <button id="btn-add-item">add item</button>
     </section>
 
+
     <script>
-        const items = document.getElementsByClassName('item');
+       const items = document.getElementsByClassName('item');
        for(const item of items){
-        item.addEventListener('click', function (event){
+        item.addEventListener('click', function(event){
             event.target.parentNode.removeChild(event.target);
         })
        }
