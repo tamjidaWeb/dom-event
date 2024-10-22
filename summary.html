@@ -3,28 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Summary event handlers</title>
+    <title>JS DOM Summary</title>
 </head>
 <body>
-    <h1>explore DOM events</h1>
-    <button onclick="makeGreen()">Make green</button>
-    <button id="make-yellow">make yellow</button>
-
+    <h1>final DOM event handlers</h1>
+    <h3 id="handler-status">Default Text</h3>
+    <p id="input-text-display">Default input text</p>
+    <input id="input-field" type="text">
+    <button id="btn-update">update</button>
     <br>
-    <input id="user-email" type="email">
-
+    <br>
+    
+    <button onclick="handleOnClick()"> handle Add onclick Function</button>
+<button id="event-listener">handle event by addEventListener</button>
     <script>
-        //option :1
-        function makeGreen (){
-            document.body.style.backgroundColor = 'green';        }
+        function handleOnClick(){
+            const handlerStatus = document.getElementById('handler-status')
+            handlerStatus.innerText= 'handle by function status on attribbute'
+        }
 
-            //option:2
-            document.getElementById('make-yellow').addEventListener('click', function (){
-                document.body.style.backgroundColor = 'yellow';
-            });
-            document.getElementById('user-email').addEventListener('keyup', function(event){
-                console.log(event.target.value);
-            })
+
+        //option 2
+        document.getElementById('event-listener').addEventListener('click', function (){
+            const handleStatus = document.getElementById('handler-status')
+            handleStatus.innerText = 'updated by add event listener button'
+        })
+
+        //option 2 recape
+        document.getElementById('btn-update').addEventListener('click', function (){
+            const inputField = document.getElementById('input-field');
+            // console.log(inputField.value);
+            const inputText = inputField.value;
+            const p = document.getElementById('input-text-display')
+            p.innerText= inputText;
+            inputText.value = '';
+        })
 
     </script>
 </body>
