@@ -31,6 +31,19 @@ function makePink (){
     document.body.style.backgroundColor = 'pink';
 }
 
+//option 5 another
+const orangeButtons = document.getElementById('make-orange');
+orangeButtons.addEventListener('click',function makeGreen(){
+    document.body.style.backgroundColor = 'orange';
+})
+
+
+//option 5 Final
+document.getElementById('make-goldenrod').addEventListener('click', function(){})
+document.getElementById('make-goldenrod').addEventListener('click',function(){
+    document.body.style.backgroundColor = 'goldenrod';
+})
+
 
 
 
