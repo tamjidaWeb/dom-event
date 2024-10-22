@@ -11,6 +11,18 @@
     <button onclick="console.log(19)">another me</button>
     <br>
     <button onclick="document.body.style.backgroundColor= 'yellow'">make yellow</button>
+    <button onclick="makeRed()">make red</button>
+    <button id="make-purple">make purple</button>
     <script src="js/events.js"></script>
+
+    <script>
+      const makePurpleButton = document.getElementById('make-purple');
+      makePurpleButton.onclick = makePurple;
+
+      function makePurple(){
+        document.body.style.backgroundColor = 'purple'; 
+      }
+
+    </script>
 </body>
 </html>
