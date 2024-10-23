@@ -8,9 +8,9 @@
 <body>
     <h1>final dom event handlers</h1>
     <h3 id="handler-status">Default text</h3>
-    <p>default</p>
-    <input type="text">
-    <button>update</button>
+    <p id="input-text">default</p>
+    <input id="input-field" type="text">
+    <button id="btn-update">update</button>
     <p></p>
     <br>
     <button onclick="handleonclick()">handle event by add onclick Function</button>
@@ -23,6 +23,12 @@
         document.getElementById('event-listener').addEventListener('click', function(){
             const handlerStatus =document.getElementById('handler-status');
             handlerStatus.innerText= 'hello'
+        })
+        document.getElementById('btn-update').addEventListener('click', function(){
+            const inputField = document.getElementById('input-field');
+            const inputText = inputField.value;
+            const p = document.getElementById('input-text');
+            p.innerText = inputText;
         })
 
     </script>
