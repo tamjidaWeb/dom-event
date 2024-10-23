@@ -7,6 +7,24 @@
 </head>
 <body>
     <h1>final dom event handlers</h1>
-    <button>add onclick Function</button>
+    <h3 id="handler-status">Default text</h3>
+    <p>default</p>
+    <input type="text">
+    <button>update</button>
+    <p></p>
+    <br>
+    <button onclick="handleonclick()">handle event by add onclick Function</button>
+    <button id="event-listener">handle event by addEvent listener</button>
+    <script>
+        function handleonclick(){
+            const handlerStatus = document.getElementById('handler-status')
+            handlerStatus.innerText= 'handled by function attached onclick attribute'
+        }
+        document.getElementById('event-listener').addEventListener('click', function(){
+            const handlerStatus =document.getElementById('handler-status');
+            handlerStatus.innerText= 'hello'
+        })
+
+    </script>
 </body>
 </html>
