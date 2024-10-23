@@ -18,8 +18,6 @@
         <br>
         <button id="btn-post">post</button>
     </div>
-
-
         <script>
             // step 1 : add event listener to the post button
             document.getElementById('btn-post').addEventListener('click', function (){
@@ -28,10 +26,6 @@
                 const newComment = commentBox.value;
                 console.log(newComment);
 
-                //step 3: set the comment inside the comment container
-                // 1. get the comment container
-                //2. create a new element (p tag)
-                //3. set the text of the comment as innertext of the p tag
                 const commentConatainer = document.getElementById('comment-container');
                 const p = document.createElement('p')
                 p.innerText = newComment;
