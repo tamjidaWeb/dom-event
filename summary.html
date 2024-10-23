@@ -3,42 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS DOM Summary</title>
+    <title>Document</title>
 </head>
 <body>
-    <h1>final DOM event handlers</h1>
-    <h3 id="handler-status">Default Text</h3>
-    <p id="input-text-display">Default input text</p>
-    <input id="input-field" type="text">
-    <button id="btn-update">update</button>
-    <br>
-    <br>
-    
-    <button onclick="handleOnClick()"> handle Add onclick Function</button>
-<button id="event-listener">handle event by addEventListener</button>
+    <h1>final dom event</h1>
+    <h3 id="handler-Status">default text</h3>
+    <button onclick="handleClick()">handle event add onclick</button>
+
     <script>
-        function handleOnClick(){
-            const handlerStatus = document.getElementById('handler-status')
-            handlerStatus.innerText= 'handle by function status on attribbute'
+        function handleClick(){
+            const handlerStatus = document.getElementById('handler-Status');
+            handlerStatus.innerText ='handle by function attached onclick';
         }
-
-
-        //option 2
-        document.getElementById('event-listener').addEventListener('click', function (){
-            const handleStatus = document.getElementById('handler-status')
-            handleStatus.innerText = 'updated by add event listener button'
-        })
-
-        //option 2 recape
-        document.getElementById('btn-update').addEventListener('click', function (){
-            const inputField = document.getElementById('input-field');
-            // console.log(inputField.value);
-            const inputText = inputField.value;
-            const p = document.getElementById('input-text-display')
-            p.innerText= inputText;
-            inputText.value = '';
-        })
-
     </script>
 </body>
 </html>
