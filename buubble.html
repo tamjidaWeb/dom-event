@@ -3,64 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Evenet Bubble</title>
+
     <style>
-        #item-2{
+        ul, body, section{
+            border: 1px solid red;
+        }
+         body, section{
+            border: 1px solid blue;
+        }
+         section{
+            border: 1px solid yellow;
+        }
+         #item-2{
             border: 1px solid purple;
-        }
-        ul{
-            border:1px solid red ;
-        }
-         body{
-            border:1px solid green ;
-        }
-       section{
-            border:1px solid blue ;
         }
     </style>
 </head>
 <body id="body">
-    <h1>ecploring event bubble</h1>
+    <h1>Exploreing event Bubble</h1>
+
     <section id="list-container">
         <ul id="list-ul">
             <li id="item-1">Lorem, ipsum.</li>
-            <li id="item-2">Repellendus, aliquid?</li>
-            <li id="item-3">Atque, obcaecati.</li>
-            <li id="item-4">Odit, quibusdam!</li>
-            <li id="item-5">Illum, modi.</li>
-            <li id="item-6">Numquam, nulla!</li>
+            <li id="item-2">Repudiandae, ipsam?</li>
+            <li id="item-3">Assumenda, architecto.</li>
+            <li id="item-4">Obcaecati, tempora.</li>
+            <li id="item-5">Fugiat, corrupti.</li>
+            <li id="item-6">Odit, quidem.</li>
         </ul>
     </section>
 
-    <script>
-        document.getElementById('item-2').addEventListener('click', function (event){
-            console.log('item to click');
-            event.stopPropagation();
-        })
-        document.getElementById('item-2 second').addEventListener('click', function (event){
-            console.log('item to click');
-            // event.stopPropagation();
-        })
-        document.getElementById('item-2 third').addEventListener('click', function (event){
-            console.log('item to click');
-            // event.stopPropagation();
-        })
-        document.getElementById('item-2 fourth').addEventListener('click', function (event){
-            console.log('item to click');
-            // event.stopPropagation();
-        })
-        document.getElementById('list-ul').addEventListener('click', function (){
-            console.log('ul clicked');
-            // event.stopPropagation();
-        })
-        document.getElementById('list-container').addEventListener('click', function (){
-            console.log('section clicked');
-            // event.stopPropagation();
-        })
-        document.getElementById('body').addEventListener('click', function (event){
-            console.log('body clicked');
-            // event.stopPropagation();
-        })
-    </script>
+<script>
+    document.getElementById('item-2').addEventListener('click', function(event){
+        console.log('item 2 clicked');
+        event.stopImmediatePropagation();
+    })
+    document.getElementById('item-2').addEventListener('click', function(event){
+        console.log('item 2 second clicked');
+       
+    })
+    document.getElementById('item-2').addEventListener('click', function(event){
+        console.log('item 2 third clicked');
+    
+    })
+    document.getElementById('list-ul').addEventListener('click', function(){
+        console.log('ul clicked')
+    })
+   
+    document.getElementById('list-container').addEventListener('click', function(){
+        console.log('section container  clicked')
+    })
+    document.getElementById('body').addEventListener('click', function(){
+        console.log('body  clicked')
+    })
+</script>
+
+
+
+
 </body>
 </html>

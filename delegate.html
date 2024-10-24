@@ -3,46 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Event Delegate</title>
 </head>
 <body>
-    <h1>explore event delegate</h1>
-    <section>
-        <ul id="list-container">
-            <li class="item">Lorem, ipsum dolor.</li>
-            <li class="item">Deleniti, delectus assumenda!</li>
-            <li class="item">Delectus, consequuntur eveniet!</li>
-            <li class="item">Eos, ad quaerat.</li>
-            <li class="item">Quas, doloremque ipsum?</li>
-            <li class="item">Porro, voluptatem. Doloremque!</li>
-        </ul>
-        <button id="btn-add-item">add item</button>
-    </section>
+    <h1>Explore event delegate</h1>
+    <ul id="list-container">
+        <li class="item">Lorem, ipsum dolor.</li>
+        <li class="item">Eaque, obcaecati numquam.</li>
+        <li class="item">Perspiciatis, blanditiis. Nihil?</li>
+        <li class="item">Veniam, est dicta.</li>
+        <li class="item">Laborum, quia earum.</li>
+        <li class="item">Dolorum, facilis laboriosam.</li>
+    </ul>
 
 
     <script>
-    //    const items = document.getElementsByClassName('item');
-    //    for(const item of items){
-    //     item.addEventListener('click', function(event){
-    //         event.target.parentNode.removeChild(event.target);
-    //     })
-    //    }
+       const items=  document.getElementsByClassName('item')
+        for(const item of items){
+            item.addEventListener('click', function(event){
+                event.target.parentNode.removeChild(event.target)
+
+            })
+        }
 
 
-    document.getElementById('list-container').addEventListener('click', function (event){
-        // console.log(event.target);
-        event.target.parentNode.removeChild(event.target);
-
-    })
-
-
-       document.getElementById('btn-add-item').addEventListener('click', function(){
-        const listContainer  = document.getElementById('list-container');
-        const li = document.createElement('li');
-        li.innerText = 'brand new item added';
-        li.classList.add('item');
-        listContainer.appendChild(li);
-       })
-    </script>
+</script>
 </body>
 </html>

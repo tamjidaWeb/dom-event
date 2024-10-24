@@ -6,39 +6,35 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 id="secret">my secret info</h1>
+    <h1 id="secret-h1">my secret info</h1>
     <input id="input-id" type="text" placeholder="enter delete">
-    <button id="btn-dlt" disabled>Delete</button>
+    <button id="button-delete" disabled>delete</button>
+
 
 
 
 
     <script>
-        document.getElementById('btn-dlt').addEventListener('click', function (){
-            const secret = document.getElementById('secret');
-            secret.style.display = 'none';
+        document.getElementById('input-id').addEventListener('keyup', function(event){
+            const text = event.target.value;
+            console.log(text);
+            const buttonDelete = document.getElementById('button-delete');
+            if(text === 'delete'){
+                buttonDelete.removeAttribute('disabled')
+            }
+            else{
+                buttonDelete.setAttribute('disabled', true)
+            }
             
         })
 
-        document.getElementById('input-id').addEventListener('keyup', function(event){
-            const text =event.target.value;
-            console.log(text)
-            const deleteButton = document.getElementById('btn-dlt');
 
-            if(text === 'delete'){
-                deleteButton.removeAttribute('disabled')
-            }
-            else{
-                deleteButton.setAttribute('disabled',true)
-            }
+
+
+        document.getElementById('button-delete').addEventListener('click', function(){
+            const secret = document.getElementById('secret-h1')
+            secret.style.display = 'none';
         })
-
-
-
     </script>
-
-
-
-
 </body>
 </html>
